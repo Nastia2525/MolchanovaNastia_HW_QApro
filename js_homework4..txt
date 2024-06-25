@@ -1,0 +1,56 @@
+let amount = prompt("Set your amount of random numbers (integers only): ",'');
+let min = 100;
+let max = 1000;
+let number;
+
+let oddCounter= 0; 
+let  evenCounter = 0; 
+let odd = [];
+let even = [];
+function Generation(amount) {
+  for (let i = 0; i < amount; i++) {
+    number = Math.floor(Math.random() * (max - min + 1) + min);
+   // console.log(number);
+    if (number%2 == 1) {
+      odd.push (number);
+      oddCounter++;
+    } else {
+      even.push (number);
+      evenCounter++;
+    }
+  }
+  return (oddCounter);
+  //return (evenCounter)
+}
+
+//}
+for (let i=0; i<even.length; i++){
+    console.log(even[i] )
+}
+//console.log(even)
+
+//}
+
+let oddNumbers = Generation(amount);
+console.log("amount of random numbers: " + amount);
+console.log("amount odd: " + oddNumbers);
+console.log("amount even: " + evenCounter);
+console.log("odd: " + Math.round(oddNumbers*100/amount) +"%");
+console.log("even: " + Math.round(evenCounter*100/amount) +"%");
+
+if (amount == 0){
+  console.log("even to odd: " + 1);  
+}
+else{
+console.log("even to odd : " + evenCounter/oddNumbers)}
+
+
+console.log("odd array: " );
+odd.forEach((item) => {
+  console.log(item);
+});
+console.log("even array: " );
+even.forEach((item) => {
+  console.log(item);
+});
+
