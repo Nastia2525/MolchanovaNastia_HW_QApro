@@ -1,0 +1,51 @@
+var services = {
+"Haircut": "60 hrn",
+"Shaving": "80 hrn",
+"Head washing": "100 hrn",
+"BreackingGlass":" ",
+price: function(){
+  let sum = 0
+var values = Object.values(services)
+   for(let i=0; i<values.length-3; i++) { 
+    let value = parseInt(values[i])
+         
+            sum += value
+          
+     }
+     return sum
+    },
+    minPrice: function(){
+  
+    var values = Object.values(services)
+    let min  = parseInt(values[0])
+
+   for(let i=0; i<values.length-3; i++) {
+        let value = parseInt(values[i])
+ if(min > value)
+         {
+            min = value
+         }
+     }
+     return min
+},
+    maxPrice: function(){
+    let max = 0
+    var values = Object.values(services)
+    for(let i=0; i<values.length-3; i++) { 
+        let value = parseInt(values[i])
+
+    if(max < value)
+         {
+            max = value
+         }
+     }
+     return max
+ 
+    }
+};
+
+services.BreackingGlass = "200 hrn"
+console.log(services) 
+console.log("max Price: " + services.maxPrice() + " hrn")
+console.log("Price: " +  services.price() + " hrn")
+console.log("min Price: " + services.minPrice() + " hrn")
