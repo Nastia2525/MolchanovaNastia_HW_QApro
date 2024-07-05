@@ -1,0 +1,19 @@
+var summerTrip = {
+    traveler : " ",
+    firstCity : "Berlin",
+    secondCity : "London",
+    thirdCity : "Odesa",
+    tripDuration : function () {
+        return "I'm, " + this.traveler + ", going to " + this.firstCity + " and " + this.secondCity + ", and " +  this.thirdCity + ", and " + this.fourthCity + "."
+    },
+    tripSchedule : function () {
+         return this.tripDuration() + " This summer!"
+    }
+    
+}
+
+summerTrip["fourthCity"] ="Istambul"
+summerTrip.traveler = "Nastia Molchanova"
+console.log(summerTrip)
+console.log(summerTrip.tripDuration())
+console.log(summerTrip.tripSchedule())
