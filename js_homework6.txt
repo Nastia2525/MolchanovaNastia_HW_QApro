@@ -1,0 +1,84 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+const company = {
+  name: 'Велика Компанія',
+  type:'Головна компанія',
+  platform: 'Платформа для продажу квитків',
+  sellsSolution: 'Рішення для продажу квитків',
+  clients: [
+    {
+      name: 'client 1',
+      type: 'subCompany',
+      uses: 'ПО для продажу квитків',
+      sells: 'Рішення для продажу квитків',
+      partners: [
+        {
+          name: 'partner 1.1',
+          type: 'subSubCompany',
+          uses: 'Рішення для продажу квитків',
+          sells: 'Рішення для продажу квитків',
+        },
+        {
+          name: 'partner 1.2',
+          type: 'subSubCompany',
+          uses: 'Рішення для продажу квитків',
+          sells: 'Рішення для продажу квитків',
+          partners: [
+            {
+              name: 'partner 1.2.1',
+              type: 'subSubCompany',
+              uses: 'Рішення для продажу квитків',
+              sells: 'Рішення для продажу квитків',
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'client 2',
+      type: 'subCompany',
+      uses: 'ПО для продажу квитків',
+      sells: 'Рішення для продажу квитків'
+    }
+  ]
+};
+
+
+function getIndexByName(name)  {
+company.clients.forEach(clientFunction)
+
+function clientFunction(client) {
+     let nameSearch = name
+  if(client.name === nameSearch){
+      console.log(client)
+    }
+      if(client.partners){
+      client.partners.forEach(partnerFunction)}
+    }
+   function partnerFunction(partner) {
+     let nameSearch = name
+  if(partner.name === nameSearch){
+      console.log(partner)
+    }
+      if(partner.partners){
+      partner.partners.forEach(partnerFunction)}
+    } 
+}
+getIndexByName('partner 1.2.1')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
