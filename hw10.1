@@ -1,0 +1,39 @@
+var arr = [
+    {
+        userName:"Test",
+        lastName:"Test",
+        email:"test.test@gmail.com"
+    },
+    {
+        userName:"15",
+        lastName:"12",
+        email:"12.15@gmail.com"
+    },
+    {
+        userName:"Dmitro",
+        lastName:"Porohov",
+        email:"dmitro.porohov@yahoo.com"
+    },
+    {
+        userName:"Andrii",
+        lastName:"",
+        email:"andrii@mail.ru" 
+    },
+];
+
+//// Variant 1
+var p=[]
+let regexp = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo).com$/
+
+for (let element of arr ){
+if (regexp.test(element.email)){
+    p.push(element)
+    }
+}
+console.log(p)
+
+//// Variant 2
+let regexp = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo).com/
+
+arr = arr.reduce((p,c) => ( regexp.test(c.email)&& p.push(c),p),[]);
+console.log(arr);
