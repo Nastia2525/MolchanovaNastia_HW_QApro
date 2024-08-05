@@ -1,0 +1,14 @@
+var arr =['Wonderful', 'Joyful',
+
+'Happiness', 'Time', 'Task', 'Apple']
+
+
+var p=[]
+let regexp = /\b[^aA\s]{6,}\b/g
+
+for (let element of arr ){
+if ((element.match(regexp))){
+    p.push(element)
+}
+}
+console.log(p)
